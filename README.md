@@ -23,7 +23,7 @@ Andrea Alonso
 ## How to use
 
 On your web browser, go to `http://localhost:3001` to view the home page and available endpoints
-To view different excuses, type in the excuse at the end of the URl, ex: `http://localhost:3001/family`
+To view different excuses, type in the excuse at the end of the URL, ex: `http://localhost:3001/family`
 
 ## License
 
