@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import axios from "axios";
+import cors from "cors";
 
 // Creates dictionary containing required mongoose configurations
 let mongooseConfig = {
