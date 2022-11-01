@@ -15,6 +15,7 @@ mongoose.connect(url , mongooseConfig)
 
 // Creates new express object
 const app = express();
+app.use(cors());
 
 // Create variable storing the port that express will connect via
 let PORT = 3001
