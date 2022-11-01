@@ -9,7 +9,9 @@ let mongooseConfig = {
 }
 
 // Connects to a local mongodb using the previously defined configurations
-mongoose.connect("mongodb://localhost:27017/test4", mongooseConfig)
+const url = process.env.MONGO_URL || "mongodb://localhost:27017/test4"
+
+mongoose.connect(url , mongooseConfig)
 
 // Creates new express object
 const app = express();
@@ -18,9 +20,10 @@ const app = express();
 let PORT = 3001
 
 // Starts up the express server via the port previously defined
-app.listen(PORT, () => {
-  console.log(`Express server is up and running`)
-});
+const port = process.env.PORT || 3001
+
+app.listen(port, () => console.log(`app listening on port ${port}`))
+
 
 // Creates an array containing all possible endpoints
 let excuseEndpointsArr = ['family', 'office', 'children', 'college', 'party', 'funny', 'unbelievable', 'developers', 'gaming'];
